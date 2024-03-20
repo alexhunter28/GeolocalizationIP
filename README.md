@@ -37,9 +37,32 @@ Estas entidades fueron creadas de acuerdo a los datos que fueron provistos por l
 **¿Cuál sería para usted una forma óptima de almacenar los datos leídos en la capa
 de persistencia?**
 
-Esta solucion implementa un forma de persistencia de una sola transaccion usando los metodo de la interface JPARepository SaveAllAndFlush, ademas que que se ha activado el segundo nivel de chache de hibernate
+Esta solucion implementa un forma de persistencia de una sola transaccion usando los metodo de la interface JPARepository SaveAllAndFlush, ademas que que se ha activado el segundo nivel de chache de hibernate para mejorar el performance de la persistencia de datos.
+
+![image](https://github.com/alexhunter28/GeolocalizationIP/assets/36106982/712d8c0f-b16d-4986-a6bd-9d4d6dcffae6)
+
+El codigo completo de la aplicarion esta [aqui](https://github.com/alexhunter28/GeolocalizationIP/blob/main/src/main/java/com/appgate/geolocalizationip/service/impl/UploadDataToDB.java)
+
+Hay que aclarar que esta no es la mejor estrategia, pero se puede mejorar mucho el performance al usar otras estrategias como, la persistencia en lotes, el uso del entity manager y auto manejar la parte de FLUSH y CLEAR y una mejor configuracion del pool de conexion, otro ascpecto que limita la velocidad de este microservicio es la bass de datos H2 enbebida la cual no es una DB que esta optimizada para el manejo de grandes cargas.
+
+sin embargo en mi maquina se vieron tiempos del serivicio entre 10 y 18 segundos para cargar un lote de 500.000 registros
+
+
+**¿Cuál sería para usted la forma correcta de exponer la operación de consulta de
+datos para una IP?**
+
+Dentro de este microservicio se exponen los 2 servcicios POST y GET, el primero para la carga del archivo plano a la DB y el segundo que ejecuta la consulta
+
+![image](https://github.com/alexhunter28/GeolocalizationIP/assets/36106982/127c7c2b-18de-43ec-a8fc-56cf52d078d2)
+
+el codigo completo se encuntra [aqui](https://github.com/alexhunter28/GeolocalizationIP/blob/main/src/main/java/com/appgate/geolocalizationip/controller/GeolocalizationIPController.java)
+
+la forma correcta es usar buenas practicas de API Desing, respetando las convenciones para las URI y el uso correcto de los metodos HTTP
 
 
 
-¿Cuál sería para usted la forma correcta de exponer la operación de consulta de
-datos para una IP?
+
+
+
+
+
