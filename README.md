@@ -73,7 +73,7 @@ Debido a que el tiempo de este challenge es limitado, no se puede decir que la a
    * Implememtación de monitoreo como [Datadog](https://www.datadoghq.com/), [New Relic](https://newrelic.com/), [Dynatrace](https://www.dynatrace.com/).
 
 5. Automatización:
-   * Actualmente el despliegue se realiza de forma manual, la idea es implementar una automatización usando herramientas      como [Jenkins](https://www.jenkins.io/) ó [CircleCI](https://circleci.com/) , para la construcción de pipelines que     incluyan ejecución de pruebas, Análisis de código estático, pruebas de integración, integración y despliegue continuó (CI/CD), tambien incluyendo el versionamiento de artefactos con [JFrog](https://jfrog.com/).
+   * Actualmente no hay un despliegue automatizado solo en ambiente local, la idea es implementar una automatización usando herramientas      como [Jenkins](https://www.jenkins.io/) ó [CircleCI](https://circleci.com/) , para la construcción de pipelines que     incluyan ejecución de pruebas, Análisis de código estático, pruebas de integración, integración y despliegue continuó (CI/CD), tambien incluyendo el versionamiento de artefactos con [JFrog](https://jfrog.com/).
  
 6. Código
  * Implementar e; manejo de los errores dentro del Micro, crear los perfiles de la aplicación según los ambientes se recomiendan 3 ambientes `Desarrollo`, `Pruebas` y `Producción `
