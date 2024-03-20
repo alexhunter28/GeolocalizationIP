@@ -1,2 +1,0 @@
-# GeolocalizationIP
-Geoloca
