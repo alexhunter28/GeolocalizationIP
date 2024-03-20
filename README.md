@@ -60,7 +60,31 @@ el codigo completo se encuntra [aqui](https://github.com/alexhunter28/Geolocaliz
 la forma correcta es usar buenas practicas de API Desing, respetando las convenciones para las URI y el uso correcto de los metodos HTTP
 
 
+## Futuros releases
 
+Debido a que el tiempo de este challenge es limitado, no se puede decir que la aplicación desarrollada es "perfecta", se peude considerar como un primer entrgable, entre los futuros releases se puede Optar por lo siguiente:
+
+1. Documentacion codigo y de API: Es necesario completar la documentacion del codigo y de la API, para el caso de la API se recomienda usar [Swagger](https://swagger.io/)
+
+3. Seguridad:
+    * Servicios de autenticación como [Oauth2](https://oauth.net/2/), Autenticación mutua SSL,manejo de secretos comó [parameter Store](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html) y cifrado de    mensajes.
+
+4. Observabilidad:
+   * Implememtación de monitoreo como [Datadog](https://www.datadoghq.com/), [New Relic](https://newrelic.com/), [Dynatrace](https://www.dynatrace.com/).
+
+5. Automatización:
+   * Actualmente el despliegue se realiza de forma manual, la idea es implementar una automatización usando herramientas      como [Jenkins](https://www.jenkins.io/) ó [CircleCI](https://circleci.com/) , para la construcción de pipelines que     incluyan ejecución de pruebas, Análisis de código estático, pruebas de integración, integración y despliegue continuó (CI/CD), tambien incluyendo el versionamiento de artefactos con [JFrog](https://jfrog.com/).
+ 
+6. Código
+ * Implementar e; manejo de los errores dentro del Micro, crear los perfiles de la aplicación según los ambientes se recomiendan 3 ambientes `Desarrollo`, `Pruebas` y `Producción `
+
+
+
+## Conclusion
+
+1. El codigo presentado es funcional y lo pueden descargar y usarlo en su maquina local, solo debe recorgar incluir el archivo enviado en la prueba dentro de la carpeta RESOURCES
+2. Es posible evouluciionar este codigo y mejorarlo pero se necesita mas tiempo para lograr esto
+3. Crear un microservicio en spring boot facilita el proceso de desarrollo y se pueden tener resultados rapidos frente a una necesidad
 
 
 
